@@ -1,0 +1,235 @@
+:root {
+  --color-primary: #3282b8;
+  --color-secondary:  #50d890;
+  --color-accent: #7fffD4;
+  --color-dark: #1b262c;
+  --color-light: #effffb;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: 56.25%;
+  scroll-behavior: smooth;
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--color-light);
+}
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+h1 {
+  font-size: 5rem;
+}
+h2 {
+  font-size: 4rem;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--color-light);
+}
+.navbar {
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  background-color: var(--color-dark);
+}
+.navbar ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.nav-link {
+  display: block;
+  text-align: center;
+  padding: 1.5rem;
+}
+.nav-link:hover {
+  background-color: var(--color-secondary);
+}
+.welcome-section {
+  position: absolute;
+  /* width: 100%;
+  height: 100vh; */
+  z-index: 2;
+  /* background-color: var(--color-primary); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+.welcome-section > h1 {
+  user-select: none;
+  padding: 1rem;
+}
+.welcome-section > p {
+  font-size: 2.7rem;
+  font-weight: 200;
+  font-style: italic;
+  margin-top: 2rem;
+  z-index: 2;
+  user-select: none;
+}
+.particles{
+  z-index: 1;
+  background-color: var(--color-primary);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+.particles-js-canvas-el {
+ z-index: 3;
+}
+
+.projects-section {
+  text-align: center;
+  padding: 8.5rem 2rem;
+  color: var(--color-dark);
+  background: var(--color-light);
+}
+.projects-section-header {
+  max-width: 720px;
+  margin: 0 auto 6rem auto;
+  border-bottom: 0.225rem solid var(--color-accent);
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+.project {
+  background: var(--color-dark);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 2pt;
+}
+.project-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+.project-title {
+  color: var(--color-light);
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+}
+.code {
+  color: var(--color-dark);
+  transition: color 0.3s ease-out;
+}
+.project:hover .code {
+  color: var(--color-accent);
+}
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 50vh;
+  padding: 0 2rem;
+  background: var(--color-dark);
+}
+
+.contact-section-header > h2 {
+  font-size: 5rem;
+}
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 980px;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.contact-links a:hover {
+  color: var(--color-secondary);
+}
+.contact-details {
+  font-size: 1.725rem;
+  padding: 0 1.5rem;
+}
+.contact-details > span {
+  display:none;
+}
+
+/* Breakpoint small devices 576px*/
+@media ( min-width: 36em ) {
+  html {
+    font-size: 57.8125%;
+  }
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .navbar ul {
+    flex-direction: row;
+    margin: 0 2.5rem;
+  }
+  .nav-link {
+    text-align: initial;
+  }
+  .contact-details > span {
+    display: block;
+  }
+}
+
+/* Breakpoint medium devices  768px*/
+@media ( min-width: 48em ) {
+  html {
+    font-size: 59.375%;
+  }
+}
+
+/* Breakpoint large devices 992px */
+@media ( min-width: 62em ) {
+  html {
+    font-size: 60.9375%;
+  }
+  h1 {
+    font-size: 6rem;
+  }
+  h2 {
+    font-size: 4.5rem;
+  }
+  .contact-section-header > h2 {
+    font-size: 6rem;
+  }
+  .contact-details {
+    font-size: 2.4rem;
+    padding: 0 1.5rem;
+  }
+}
+
+/* Breakpoint extra large devices 1200px */
+@media ( min-width: 75em ) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+
+
